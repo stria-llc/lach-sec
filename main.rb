@@ -38,7 +38,11 @@ class Task
       'Terminated'
     ].each { |name|
       repo = springcm.folder(path: "#{folder.path}/#{name}")
-      update_employees_in(repo, secgroup)
+      if !repo.nil?
+        update_employees_in(repo, secgroup)
+      else
+        puts "Couldn't find #{folder.path}/#{name}"
+      end
     }
   end
 
