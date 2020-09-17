@@ -15,12 +15,12 @@ class Task
 
   def do
     [
-      'Alta Corp',
-      'Bellflower',
-      'Culver City',
-      'Foothills',
-      'Hollywood',
-      'Los Angeles',
+      # 'Alta Corp',
+      # 'Bellflower',
+      # 'Culver City',
+      # 'Foothills',
+      # 'Hollywood',
+      # 'Los Angeles',
       'Newport',
       'Norwalk',
       'Van Nuys'
