@@ -1,10 +1,16 @@
 require 'springcm-sdk'
+require 'dotenv'
+Dotenv.load
 
 class Task
   attr_reader :springcm
 
   def initialize
-    @springcm = Springcm::Client.new(SPRINGCM_DATA_CENTER, SPRINGCM_CLIENT_ID, SPRINGCM_CLIENT_SECRET)
+    @springcm = Springcm::Client.new(
+      ENV['SPRINGCM_DATA_CENTER'],
+      ENV['SPRINGCM_CLIENT_ID'],
+      ENV['SPRINGCM_CLIENT_SECRET']
+    )
   end
 
   def do
